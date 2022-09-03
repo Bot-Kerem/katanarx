@@ -4,7 +4,12 @@
 #include <stdexcept>
 
 Window::Window(std::string title, int width, int height){
+
+    // if you want to make fullscreen set monitor parameter to glfwGetPrimaryMonitor()
+
     m_Window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
+    
+    // some important things
     glfwMakeContextCurrent(m_Window);
 }
 
