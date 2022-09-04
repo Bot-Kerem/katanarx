@@ -8,6 +8,9 @@ set(PROJECT_SOURCES
         src/main.cpp
         src/App.cpp
         src/Window.cpp
+        src/Shader.cpp
+
+        src/glad.c
         )
 
 include_directories(include)
