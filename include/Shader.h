@@ -10,6 +10,8 @@ class Shader{
     public:
         Shader(std::string vertexShaderPath, std::string fragmentShaderPath);
         ~Shader();
+
+        void setMat4(const char* varName, float* value);
         
         void use();
 };

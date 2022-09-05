@@ -13,7 +13,10 @@ vec3 colors[3] = vec3[](
 
 out vec3 Color;
 
+uniform mat4 view;
+uniform mat4 perspective;
+
 void main(){
-    gl_Position = vec4(vertices[gl_VertexID], 0.0f, 1.0f);
+    gl_Position = perspective * view * vec4(vertices[gl_VertexID], 0.0f, 1.0f);
     Color = colors[gl_VertexID];
 }

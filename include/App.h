@@ -2,6 +2,7 @@
 
 #include "Window.h"
 #include "Shader.h"
+#include "Camera.h"
 
 #include <string>
 
@@ -13,7 +14,10 @@ class App{
 
         Window GameWindow{WindowName, WindowWidth, WindowHeight};
         Shader shader{"./../Shaders/triangle.vs", "./../Shaders/triangle.fs"};
+
+        Camera camera{};
     public:
+        void processMouse(double posx, double posy);
         void build();
         void run();
         static void Init();

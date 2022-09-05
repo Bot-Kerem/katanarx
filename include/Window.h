@@ -8,6 +8,7 @@ class Window{
     private:
         GLFWwindow* m_Window;
 
+        static void cursorPositionCallback(GLFWwindow* window, double posx, double posy);
     public:
         Window(std::string title, int width, int height);
         
@@ -22,5 +23,9 @@ class Window{
 
         // initialize glfw
         static void Init();
+
+        void setMousePosition(double xpos, double ypos);
+
+        void setUserPointer(void* pointer);
 };
 

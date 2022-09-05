@@ -9,6 +9,7 @@ set(PROJECT_SOURCES
         src/App.cpp
         src/Window.cpp
         src/Shader.cpp
+        src/Camera.cpp
 
         src/glad.c
         )

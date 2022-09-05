@@ -47,3 +47,7 @@ Shader::~Shader(){
 void Shader::use(){
     glUseProgram(m_Program);
 }
+
+void Shader::setMat4(const char* varName, float* value){
+    glUniformMatrix4fv(glGetUniformLocation(m_Program, varName), 1, GL_FALSE, value);
+}
